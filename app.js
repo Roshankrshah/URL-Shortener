@@ -38,7 +38,7 @@ app.post('/', async (req, res, next) => {
         const result = await shortUrl.save()
         res.render('index', {
             // short_url: `${req.hostname}/${urlExists.shortId}`,
-            short_url: `http://localhost:${PORT}/${result.shortId}`,
+            short_url: `https://url-shortener-fg26.onrender.com/${result.shortId}`,
         })
     } catch (error) {
         next(error)
